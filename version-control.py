@@ -1,3 +1,5 @@
-print('Test')
+def encode():
+    pass
 
-print('Work')
+if __name__ == '__main__':
+    print('Please work again')
