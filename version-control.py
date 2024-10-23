@@ -31,8 +31,30 @@ def encode():
     print('Your password has been encrypted and stored!\n')
     return encrypted
 
-def decode():
-    pass
+def decode(encrypted):
+    res = ''
+    for element in encrypted:
+        if element == '0':
+            res += '7'
+        elif element == '1':
+            res += '8'
+        elif element == '2':
+            res += '9'
+        elif element == '3':
+            res += '0'
+        elif element == '4':
+            res += '1'
+        elif element == '5':
+            res += '2'
+        elif element == '6':
+            res += '3'
+        elif element == '7':
+            res += '4'
+        elif element == '8':
+            res += '5'
+        elif element == '9':
+            res += '6'
+    return res
 
 if __name__ == '__main__':
     while not quit:
@@ -49,7 +71,9 @@ if __name__ == '__main__':
             password = encode()
 
         elif option == '2':
-            decode()
+            decoded_pass = decode(password)
+            print(f'The encoded password is {password}, and the original password is {decoded_pass}.')
+            print()
 
         elif option == '3':
             quit = True
